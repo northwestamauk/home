@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Announcements & Events | North West AMA UK</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+    <!-- Top Bar -->
+    <div class="bg-emerald-900 text-emerald-100 py-2 px-4 text-xs sm:text-sm font-medium">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <p><i class="fa-solid fa-quote-left text-amber-400 mr-1"></i> "Love for All, Hatred for None" <i class="fa-solid fa-quote-right text-amber-400 ml-1"></i></p>
+            <div class="flex items-center gap-4 text-white">
+                <a href="https://www.facebook.com/northwestamauk" target="_blank" class="hover:text-amber-400 transition" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.twitter.com/northwestamauk" target="_blank" class="hover:text-amber-400 transition" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.instagram.com/northwestamauk/" target="_blank" class="hover:text-amber-400 transition" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.youtube.com/c/northwestamauk" target="_blank" class="hover:text-amber-400 transition" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://www.linkedin.com/in/northwestamauk/" target="_blank" class="hover:text-amber-400 transition" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="logo.png" alt="North West AMA UK Logo" class="h-14 w-14 object-contain rounded-full shadow-sm">
+                <div>
+                    <h1 class="text-lg sm:text-xl font-bold text-emerald-900 leading-tight">North West AMA UK</h1>
+                    <p class="text-xs text-slate-500 font-medium">Announcements & Events</p>
+                </div>
+            </a>
+            <nav class="hidden md:flex items-center gap-6 font-semibold text-slate-600">
+                <a href="index.html" class="hover:text-emerald-700 transition">Home</a>
+                <a href="announcements.html" class="text-emerald-700 border-b-2 border-emerald-700 pb-1">Announcements & Events</a>
+                <a href="contact.html" class="hover:text-emerald-700 transition">Contact Us</a>
+                <a href="https://chanda.org.uk/" target="_blank" class="bg-yellow-400 hover:bg-yellow-500 text-slate-900 font-bold px-4 py-2 rounded-xl shadow-md transition transform hover:-translate-y-0.5 flex items-center gap-2">
+                    <i class="fa-solid fa-hand-holding-dollar"></i> Chanda
+                </a>
+            </nav>
+            <div class="md:hidden flex items-center gap-3">
+                <a href="https://chanda.org.uk/" target="_blank" class="bg-yellow-400 hover:bg-yellow-500 text-slate-900 font-bold px-3 py-1.5 rounded-lg text-xs shadow transition">
+                    Chanda
+                </a>
+                <button id="menu-btn" class="text-slate-700 text-2xl focus:outline-none" aria-label="Toggle Menu"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t px-4 pt-2 pb-4 space-y-2 font-medium">
+            <a href="index.html" class="block py-2 text-slate-600">Home</a>
+            <a href="announcements.html" class="block py-2 text-emerald-700 font-bold">Announcements & Events</a>
+            <a href="contact.html" class="block py-2 text-slate-600">Contact Us</a>
+            <a href="https://chanda.org.uk/" target="_blank" class="block py-2 px-3 text-center bg-yellow-400 hover:bg-yellow-500 text-slate-900 font-bold rounded-lg transition">Chanda</a>
+        </div>
+    </header>
+
+    <!-- Page Header Banner -->
+    <section class="bg-gradient-to-r from-emerald-800 to-teal-900 text-white py-14 px-4 text-center">
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Community Announcements & Upcoming Events</h2>
+        <p class="mt-3 text-emerald-100 max-w-xl mx-auto text-sm sm:text-base">Stay updated with the latest regional programmes, Ijtemas, charity initiatives, and administrative notices across the North West.</p>
+    </section>
+
+    <!-- Content Area: Event Cards -->
+    <main class="max-w-7xl mx-auto px-4 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <!-- Q-Card: Ramadhan Time Table -->
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-100 hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 flex flex-col">
+                <div class="bg-gradient-to-r from-teal-800 to-emerald-900 px-6 py-4 text-white flex justify-between items-center">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-amber-400/20 text-amber-300 border border-amber-400/30 px-3 py-1 rounded-full"><i class="fa-solid fa-moon mr-1"></i> Interactive Tool</span>
+                    <span class="text-sm font-semibold text-amber-300"><i class="fa-regular fa-clock mr-1"></i> Live</span>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-2 mb-2 text-emerald-800">
+                            <i class="fa-solid fa-calendar-days text-lg"></i>
+                            <h3 class="text-xl font-bold text-slate-900">Ramadhan Time Table</h3>
+                        </div>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            Interactive UK Sahoor & Iftar calculator. Enter any UK postcode to calculate accurate timings (Sahoor: Sunrise - 90m, Iftar: Sunset + 2m), view daily prayers, and explore the Three Ashras of Ramadan.
+                        </p>
+                    </div>
+                    <div class="border-t pt-4 flex items-center justify-between text-xs text-slate-500">
+                        <span><i class="fa-solid fa-location-dot mr-1 text-emerald-600"></i> UK Postcode Lookup</span>
+                        <a href="ramzan.html" class="text-emerald-700 font-bold hover:underline flex items-center gap-1">Open Timetable <i class="fa-solid fa-arrow-right text-xs"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Q-Card: Humanity First (Replaces Sponsor Letters) -->
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-100 hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 flex flex-col">
+                <div class="bg-blue-600 px-6 py-4 text-white flex justify-between items-center">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-black/25 px-3 py-1 rounded-full">Global Charity</span>
+                    <span class="text-sm font-semibold"><i class="fa-regular fa-heart mr-1"></i> Featured</span>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-2 mb-2 text-blue-700">
+                            <i class="fa-solid fa-globe text-lg"></i>
+                            <h3 class="text-xl font-bold text-slate-900">Humanity First</h3>
+                        </div>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">Humanity First serves disaster-stricken and disadvantaged people across the globe regardless of race, religion or politics, transforming lives through medical, educational, and relief programs.</p>
+                    </div>
+                    <div class="border-t pt-4 flex items-center justify-between text-xs text-slate-500">
+                        <span><i class="fa-solid fa-earth-americas mr-1 text-blue-600"></i> International</span>
+                        <a href="https://humanityfirst.org/" target="_blank" class="text-blue-600 font-bold hover:underline flex items-center gap-1">Visit Website <i class="fa-solid fa-arrow-right text-xs"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event Card 2 -->
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-100 hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 flex flex-col">
+                <div class="bg-emerald-700 px-6 py-4 text-white flex justify-between items-center">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-black/20 px-3 py-1 rounded-full">Regional Ijtema</span>
+                    <span class="text-sm font-semibold"><i class="fa-regular fa-calendar mr-1"></i> Coming Soon</span>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-2 mb-2 text-emerald-700">
+                            <i class="fa-solid fa-mosque text-lg"></i>
+                            <h3 class="text-xl font-bold text-slate-900">Regional Gathering</h3>
+                        </div>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">Join brothers and families from Manchester, Liverpool, Rhyl, and surrounding jamaats for a spiritually uplifting weekend packed with academic competitions and sports.</p>
+                    </div>
+                    <div class="border-t pt-4 flex items-center justify-between text-xs text-slate-500">
+                        <span><i class="fa-solid fa-location-dot mr-1 text-emerald-600"></i> Darul Aman Mosque</span>
+                        <span class="text-emerald-700 font-bold">Save the Date</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event Card 3: Updated to Waqar-e-Amal -->
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-100 hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 flex flex-col">
+                <div class="bg-amber-600 px-6 py-4 text-white flex justify-between items-center">
+                    <span class="text-xs font-bold uppercase tracking-wider bg-black/20 px-3 py-1 rounded-full">Community Service</span>
+                    <span class="text-sm font-semibold"><i class="fa-regular fa-calendar mr-1"></i> Bi-Weekly</span>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-2 mb-2 text-amber-700">
+                            <i class="fa-solid fa-hands-holding-child text-lg"></i>
+                            <h3 class="text-xl font-bold text-slate-900">Waqar-e-Amal</h3>
+                        </div>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">AMA and community volunteers participate in regular Waqar-e-Amal initiatives, including neighborhood clean-ups, charity support, and community maintenance projects.</p>
+                    </div>
+                    <div class="border-t pt-4 flex items-center justify-between text-xs text-slate-500">
+                        <span><i class="fa-solid fa-location-dot mr-1 text-emerald-600"></i> Local Chapters</span>
+                        <a href="contact.html" class="text-amber-600 font-bold hover:underline flex items-center gap-1">Get Involved <i class="fa-solid fa-arrow-right text-xs"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Expandable Section for Upcoming Events -->
+        <div class="mt-12 bg-white rounded-3xl shadow-xl border border-slate-100 overflow-hidden">
+            <button id="events-toggle-btn" class="w-full bg-gradient-to-r from-emerald-900 to-teal-800 text-white px-6 py-4 flex justify-between items-center font-bold text-lg focus:outline-none hover:opacity-95 transition">
+                <span class="flex items-center gap-2">
+                    <i class="fa-solid fa-calendar-check text-amber-400"></i> Upcoming Events Schedule
+                </span>
+                <i id="events-toggle-icon" class="fa-solid fa-chevron-down transition-transform duration-300"></i>
+            </button>
+            
+            <div id="events-content" class="hidden p-6 overflow-x-auto">
+                <table class="w-full text-left border-collapse min-w-[600px]">
+                    <thead>
+                        <tr class="border-b border-slate-200 text-emerald-900 text-sm font-bold">
+                            <th class="py-3 px-4">Organisation</th>
+                            <th class="py-3 px-4">Event Type</th>
+                            <th class="py-3 px-4">Location</th>
+                            <th class="py-3 px-4">Date</th>
+                            <th class="py-3 px-4">Time</th>
+                            <th class="py-3 px-4">Majlis</th>
+                        </tr>
+                    </thead>
+                    <tbody id="events-table-body" class="text-slate-600 text-sm">
+                        <!-- Currently blank, ready for future event rows to be added -->
+                        <tr class="border-b border-slate-100">
+                            <td colspan="6" class="py-6 text-center text-slate-400 italic">No upcoming events scheduled at the moment. Check back soon!</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Callout Box -->
+        <div class="mt-16 bg-emerald-50 border border-emerald-200 rounded-3xl p-8 text-center max-w-3xl mx-auto">
+            <h3 class="text-lg font-bold text-emerald-900 mb-2"><i class="fa-solid fa-bullhorn text-emerald-600 mr-2"></i> Want to submit an event announcement?</h3>
+            <p class="text-sm text-slate-600 mb-4">If you are a local secretary or office bearer looking to list a new event or notice on this board, send the details directly to our secretariat email.</p>
+            <a href="mailto:Northwestamauk@Gmail.Com" class="inline-block bg-emerald-800 hover:bg-emerald-900 text-white font-bold text-sm px-6 py-3 rounded-xl shadow transition">Email Announcement Details</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-300 py-12 px-4 border-t border-slate-800 mt-16">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <div>
+                <div class="flex items-center gap-3 mb-3">
+                    <img src="logo.png" alt="North West AMA UK Logo" class="h-10 w-10 object-contain rounded-full">
+                    <h4 class="text-white font-bold text-lg">North West AMA UK</h4>
+                </div>
+                <p class="text-sm text-slate-400">Official regional portal serving members across the North West under the Ahmadiyya Muslim Association UK (Registered Charity No. 1208543).</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold text-base mb-3">Quick Links</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="index.html" class="hover:text-amber-400 transition">Home</a></li>
+                    <li><a href="announcements.html" class="hover:text-amber-400 transition">Announcements & Events</a></li>
+                    <li><a href="ramzan.html" class="hover:text-amber-400 transition">Ramadhan Time Table</a></li>
+                    <li><a href="contact.html" class="hover:text-amber-400 transition">Contact Us</a></li>
+                    <li><a href="https://chanda.org.uk/" target="_blank" class="text-yellow-400 hover:text-yellow-300 transition font-medium">Chanda Portal</a></li>
+                    <li><a href="https://ahmadiyya.uk" target="_blank" class="hover:text-amber-400 transition">National Website (ahmadiyya.uk)</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold text-base mb-3">Connect With Us</h4>
+                <p class="text-sm text-slate-400 mb-4">Email: <strong class="text-white">Northwestamauk@Gmail.Com</strong></p>
+                <div class="flex gap-3 text-lg">
+                    <a href="https://www.facebook.com/northwestamauk" target="_blank" class="bg-slate-800 hover:bg-emerald-700 w-10 h-10 rounded-full flex items-center justify-center text-white transition" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.twitter.com/northwestamauk" target="_blank" class="bg-slate-800 hover:bg-emerald-700 w-10 h-10 rounded-full flex items-center justify-center text-white transition" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/northwestamauk/" target="_blank" class="bg-slate-800 hover:bg-emerald-700 w-10 h-10 rounded-full flex items-center justify-center text-white transition" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/c/northwestamauk" target="_blank" class="bg-slate-800 hover:bg-emerald-700 w-10 h-10 rounded-full flex items-center justify-center text-white transition" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://www.linkedin.com/in/northwestamauk/" target="_blank" class="bg-slate-800 hover:bg-emerald-700 w-10 h-10 rounded-full flex items-center justify-center text-white transition" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto border-t border-slate-800 pt-6 text-center text-xs text-slate-500">
+            &copy; 2026 North West Ahmadiyya Muslim Association UK. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Upcoming Events Expandable Toggle
+        const eventsToggleBtn = document.getElementById('events-toggle-btn');
+        const eventsContent = document.getElementById('events-content');
+        const eventsToggleIcon = document.getElementById('events-toggle-icon');
+
+        eventsToggleBtn.addEventListener('click', () => {
+            eventsContent.classList.toggle('hidden');
+            eventsToggleIcon.classList.toggle('rotate-180');
+        });
+    </script>
+</body>
+</html>

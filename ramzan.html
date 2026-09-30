@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ramadhan Timetable | North West AMA UK</title>
+    <!-- Tailwind CSS CDN for Matching Theme Styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+      :root {
+        --bg:#f8fafc;
+        --card:#ffffff;
+        --teal:#064e3b;
+        --teal2:#047857;
+        --gold:#d97706;
+        --text:#1f2937;
+        --muted:#6b7280;
+        --line:#e5e7eb;
+        --translit-red:#b91c1c;
+        --translation-readable:#111827;
+      }
+
+      .tableWrap {
+        padding: 10px;
+        background: #fff;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+      table { 
+        width: 100%; 
+        border-collapse: collapse; 
+        text-align: center; 
+        border-radius: 12px; 
+        min-width: 550px; 
+      }
+      th {
+        background: #047857;
+        color: #ffffff;
+        padding: 12px 8px;
+        font-size: .85em;
+      }
+      td {
+        padding: 12px 8px;
+        border-bottom: 1px solid var(--line);
+        font-size: .9em;
+      }
+      tr:nth-child(even) { background: #f9fafb; }
+      td:nth-child(5), td:nth-child(6) {
+        font-weight: 700;
+        color: #065f46;
+        background: rgba(251, 191, 36, 0.15);
+      }
+
+      .duaBox {
+        border: 2px solid #fbbf24;
+        border-radius: 16px;
+        padding: 14px;
+        background: linear-gradient(180deg, #ffffff, #fffdf6);
+        margin-top: 10px;
+      }
+      .arabic {
+        direction: rtl;
+        text-align: right;
+        font-size: 1.2em;
+        font-weight: 700;
+        color: #111827;
+        line-height: 1.6;
+        padding: 10px 12px;
+        border-radius: 12px;
+        background: #ffffff;
+        border: 1px solid var(--line);
+      }
+      .latin {
+        font-weight: 700;
+        color: var(--translit-red);
+        margin-top: 10px;
+        font-size: 0.9em;
+      }
+      .translation {
+        font-weight: 600;
+        color: var(--translation-readable);
+        margin-top: 8px;
+        font-size: 0.95em;
+        line-height: 1.45;
+      }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+    <!-- Top Bar -->
+    <div class="bg-emerald-900 text-emerald-100 py-2 px-4 text-xs sm:text-sm font-medium">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <p><i class="fa-solid fa-quote-left text-amber-400 mr-1"></i> "Love for All, Hatred for None" <i class="fa-solid fa-quote-right text-amber-400 ml-1"></i></p>
+            <div class="flex items-center gap-4 text-white">
+                <a href="https://www.facebook.com/northwestamauk" target="_blank" class="hover:text-amber-400 transition" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.twitter.com/northwestamauk" target="_blank" class="hover:text-amber-400 transition" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.instagram.com/northwestamauk/" target="_blank" class="hover:text-amber-400 transition" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.youtube.com/c/northwestamauk" target="_blank" class="hover:text-amber-400 transition" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://www.linkedin.com/in/northwestamauk/" target="_blank" class="hover:text-amber-400 transition" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="logo.png" alt="North West AMA UK Logo" class="h-14 w-14 object-contain rounded-full shadow-sm">
+                <div>
+                    <h1 class="text-lg sm:text-xl font-bold text-emerald-900 leading-tight">North West AMA UK</h1>
+                    <p class="text-xs text-slate-500 font-medium">Ramadhan Timetable</p>
+                </div>
+            </a>
+            <nav class="hidden md:flex items-center gap-6 font-semibold text-slate-600">
+                <a href="index.html" class="hover:text-emerald-700 transition">Home</a>
+                <a href="announcements.html" class="hover:text-emerald-700 transition">Announcements & Events</a>
+                <a href="contact.html" class="hover:text-emerald-700 transition">Contact Us</a>
+                <a href="https://chanda.org.uk/" target="_blank" class="bg-yellow-400 hover:bg-yellow-500 text-slate-900 font-bold px-4 py-2 rounded-xl shadow-md transition transform hover:-translate-y-0.5 flex items-center gap-2">
+                    <i class="fa-solid fa-hand-holding-dollar"></i> Chanda
+                </a>
+            </nav>
+            <div class="md:hidden flex items-center gap-3">
+                <a href="https://chanda.org.uk/" target="_blank" class="bg-yellow-400 hover:bg-yellow-500 text-slate-900 font-bold px-3 py-1.5 rounded-lg text-xs shadow transition">
+                    Chanda
+                </a>
+                <button id="menu-btn" class="text-slate-700 text-2xl focus:outline-none" aria-label="Toggle Menu"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t px-4 pt-2 pb-4 space-y-2 font-medium">
+            <a href="index.html" class="block py-2 text-slate-600">Home</a>
+            <a href="announcements.html" class="block py-2 text-slate-600">Announcements & Events</a>
+            <a href="contact.html" class="block py-2 text-slate-600">Contact Us</a>
+            <a href="https://chanda.org.uk/" target="_blank" class="block py-2 px-3 text-center bg-yellow-400 hover:bg-yellow-500 text-slate-900 font-bold rounded-lg transition">Chanda</a>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="bg-gradient-to-r from-emerald-800 to-teal-900 text-white py-12 px-4 text-center">
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">UK Smart Timetable for Sahoor and Iftar</h2>
+        <p class="mt-3 text-emerald-100 max-w-2xl mx-auto text-sm sm:text-base">
+            Enter your UK postcode (or manual coordinates) and choose your date range. The system utilizes Open-Meteo for near-term dates and automatically falls back to local astronomical solar calculations for custom ranges.
+        </p>
+    </section>
+
+    <!-- Main Container -->
+    <main class="max-w-6xl mx-auto px-4 py-10">
+        <div class="bg-white border border-slate-200 rounded-3xl shadow-xl overflow-hidden">
+            
+            <!-- Controls Section -->
+            <div class="bg-slate-50 p-6 border-b border-slate-200">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+                    <div class="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
+                        <label for="postcode" class="block text-xs font-bold text-slate-800 uppercase tracking-wider mb-2">UK Postcode</label>
+                        <input type="text" id="postcode" placeholder="e.g. M1 1AD" value="M1 1AD" class="w-full px-3 py-2 text-sm border-2 border-emerald-700 rounded-xl focus:outline-none uppercase font-semibold" />
+                        <div class="text-xs text-slate-500 mt-2">Location lookup uses Postcodes.io (lat/lon).</div>
+                    </div>
+
+                    <div class="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
+                        <label for="startDate" class="block text-xs font-bold text-slate-800 uppercase tracking-wider mb-2">Date From</label>
+                        <input type="date" id="startDate" class="w-full px-3 py-2 text-sm border-2 border-emerald-700 rounded-xl focus:outline-none font-semibold text-slate-700" />
+                        <div class="text-xs text-slate-500 mt-2">Default is <b>today</b>.</div>
+                    </div>
+
+                    <div class="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
+                        <label for="endDate" class="block text-xs font-bold text-slate-800 uppercase tracking-wider mb-2">Date To</label>
+                        <input type="date" id="endDate" class="w-full px-3 py-2 text-sm border-2 border-emerald-700 rounded-xl focus:outline-none font-semibold text-slate-700" />
+                        <div class="text-xs text-slate-500 mt-2">Default is <b>30 days</b> from start.</div>
+                    </div>
+                </div>
+
+                <div class="max-w-4xl mx-auto mt-4 flex flex-wrap gap-4 items-center justify-between bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
+                    <div class="flex items-center gap-3">
+                        <input type="checkbox" id="useOpenMeteo" checked class="w-4 h-4 text-emerald-600 rounded focus:ring-emerald-500" />
+                        <label for="useOpenMeteo" class="text-sm font-bold text-slate-800">Use Open-Meteo live solar data when available</label>
+                    </div>
+                    <span class="bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1 rounded-full">15-day live window</span>
+                </div>
+
+                <div class="max-w-4xl mx-auto mt-4 flex flex-wrap gap-3 justify-center">
+                    <button id="btnGenerate" class="bg-amber-500 hover:bg-amber-600 text-white font-bold px-6 py-2.5 rounded-xl shadow transition">Generate Timetable</button>
+                    <button id="btnToggleManual" class="bg-emerald-800 hover:bg-emerald-900 text-white font-bold px-6 py-2.5 rounded-xl shadow transition">Manual Lat/Lon</button>
+                </div>
+
+                <div id="manualWrap" class="hidden max-w-4xl mx-auto mt-4 p-4 rounded-2xl border-2 border-dashed border-slate-300 bg-white">
+                    <div class="flex flex-col sm:flex-row justify-between sm:items-center gap-1 mb-3">
+                        <span class="font-bold text-slate-800 text-sm">Manual Coordinates Fallback</span>
+                        <span class="text-xs text-slate-500">Use if your network blocks Postcodes.io</span>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label for="lat" class="block text-xs font-bold text-slate-700 mb-1">Latitude (UK approx: 49.9 to 60.9)</label>
+                            <input type="number" id="lat" step="0.000001" placeholder="e.g. 53.4808" class="w-full px-3 py-2 text-sm border border-slate-300 rounded-xl focus:outline-none" />
+                        </div>
+                        <div>
+                            <label for="lon" class="block text-xs font-bold text-slate-700 mb-1">Longitude (UK approx: -8.6 to 2.1)</label>
+                            <input type="number" id="lon" step="0.000001" placeholder="e.g. -2.2426" class="w-full px-3 py-2 text-sm border border-slate-300 rounded-xl focus:outline-none" />
+                        </div>
+                    </div>
+                </div>
+
+                <div id="status" class="max-w-4xl mx-auto mt-4 p-3 rounded-xl bg-white border border-slate-200 text-emerald-900 font-semibold text-sm text-center">Ready.</div>
+            </div>
+
+            <!-- Table Container -->
+            <div class="tableWrap">
+                <table id="timeTable">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Day</th>
+                            <th>Date</th>
+                            <th>Sunrise</th>
+                            <th>Sahoor<br /><small>(Sunrise - 90m)</small></th>
+                            <th>Iftar<br /><small>(Sunset + 2m)</small></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td colspan="6" class="py-6 text-slate-500">Enter a postcode and select dates to begin.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Fasting Prayers & Ashras -->
+            <div class="bg-slate-50 border-t border-slate-200 p-6 sm:p-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    
+                    <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+                        <h3 class="text-lg font-bold text-emerald-950 mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-hands-praying text-amber-500"></i> Prayers for Starting & Breaking Fast
+                        </h3>
+                        
+                        <div class="duaBox">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="font-bold text-emerald-900 text-sm">1. Intention for Starting Fast (Sehri/Suhoor)</span>
+                            </div>
+                            <div class="arabic" lang="ar">وَبِصَوْمِ غَدٍ نَوَيْتُ مِنْ شَهْرِ رَمَضَانَ</div>
+                            <div class="latin">Wa bisawmi ghadinn nawaiytu min shahri Ramadan.</div>
+                            <div class="translation">"I intend to fast tomorrow in the holy month of Ramadan."</div>
+                        </div>
+
+                        <div class="duaBox mt-4">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="font-bold text-emerald-900 text-sm">2. Prayer for Breaking the Fast (Iftar)</span>
+                            </div>
+                            <div class="arabic" lang="ar">اللَّهُمَّ إِنِّي لَكَ صُمْتُ وَبِكَ آمَنْتُ وَعَلَيْكَ تَوَكَّلْتُ وَعَلَى رِزْقِكَ أَفْطَرْتُ</div>
+                            <div class="latin">Allahumma inni laka sumtu wa bika aamantu wa alayka tawakkaltu wa ala rizq-ika-aftartu.</div>
+                            <div class="translation">"O Allah! I fasted for You, I believe in You, I rely on You, and with Your sustenance, I break my fast."</div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+                        <h3 class="text-lg font-bold text-emerald-950 mb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-moon text-amber-500"></i> The Three Ashras of Ramadan
+                        </h3>
+                        <p class="text-xs text-slate-500 mb-3">Ramadan is divided into three 10-day phases focusing on Mercy, Forgiveness, and Salvation.</p>
+                        
+                        <div class="duaBox">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="font-bold text-emerald-900 text-sm">First 10 Days (Mercy)</span>
+                                <span class="bg-emerald-800 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">Ashra 1</span>
+                            </div>
+                            <div class="arabic" lang="ar">رَبِّ اغْفِرْ وَارْحَمْ وَأَنْتَ خَيْرُ الرَّاحِمِينَ</div>
+                            <div class="latin">Rab-bigh-fir war-ham wa Anta Khair-ur-Raahimeen</div>
+                            <div class="translation">My Lord, forgive and have mercy, for You are the Best of Merciful.</div>
+                        </div>
+
+                        <div class="duaBox mt-3">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="font-bold text-emerald-900 text-sm">Middle 10 Days (Forgiveness)</span>
+                                <span class="bg-emerald-800 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">Ashra 2</span>
+                            </div>
+                            <div class="arabic" lang="ar">أَسْتَغْفِرُ اللَّهَ رَبِّي مِنْ كُلِّ ذَنْبٍ وَأَتُوبُ إِلَيْهِ</div>
+                            <div class="latin">Astaghfirullah rabbi min kulli dhanbin wa atubu ilayh</div>
+                            <div class="translation">I seek forgiveness from Allah, my Lord, from every sin and I turn to Him.</div>
+                        </div>
+
+                        <div class="duaBox mt-3">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="font-bold text-emerald-900 text-sm">Last 10 Days (Salvation)</span>
+                                <span class="bg-emerald-800 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">Ashra 3</span>
+                            </div>
+                            <div class="arabic" lang="ar">اللَّهُمَّ إِنَّكَ عَفُوٌّ تُحِبُّ الْعَفْوَ فَاعْفُ عَنِّي</div>
+                            <div class="latin">Allahumma innaka 'afuwwun tuhibbul 'afwa fa'fu 'anni</div>
+                            <div class="translation">O Allah, You are Most Forgiving, and You love forgiveness, so forgive me.</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-300 py-12 px-4 border-t border-slate-800 mt-16">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <div>
+                <div class="flex items-center gap-3 mb-3">
+                    <img src="logo.png" alt="North West AMA UK Logo" class="h-10 w-10 object-contain rounded-full">
+                    <h4 class="text-white font-bold text-lg">North West AMA UK</h4>
+                </div>
+                <p class="text-sm text-slate-400">Official regional portal serving members across the North West under the Ahmadiyya Muslim Association UK (Registered Charity No. 1208543).</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold text-base mb-3">Quick Links</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="index.html" class="hover:text-amber-400 transition">Home</a></li>
+                    <li><a href="announcements.html" class="hover:text-amber-400 transition">Announcements & Events</a></li>
+                    <li><a href="ramzan.html" class="text-emerald-400 font-semibold transition">Ramadhan Time Table</a></li>
+                    <li><a href="contact.html" class="hover:text-amber-400 transition">Contact Us</a></li>
+                    <li><a href="https://chanda.org.uk/" target="_blank" class="text-yellow-400 hover:text-yellow-300 transition font-medium">Chanda Portal</a></li>
+                    <li><a href="https://ahmadiyya.uk" target="_blank" class="hover:text-amber-400 transition">National Website (ahmadiyya.uk)</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold text-base mb-3">Connect With Us</h4>
+                <p class="text-sm text-slate-400 mb-4">Email: <strong class="text-white">Northwestamauk@Gmail.Com</strong></p>
+                <div class="flex gap-3 text-lg">
+                    <a href="https://www.facebook.com/northwestamauk" target="_blank" class="bg-slate-800 hover:bg-emerald-700 w-10 h-10 rounded-full flex items-center justify-center text-white transition" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.twitter.com/northwestamauk" target="_blank" class="bg-slate-800 hover:bg-emerald-700 w-10 h-10 rounded-full flex items-center justify-center text-white transition" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/northwestamauk/" target="_blank" class="bg-slate-800 hover:bg-emerald-700 w-10 h-10 rounded-full flex items-center justify-center text-white transition" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/c/northwestamauk" target="_blank" class="bg-slate-800 hover:bg-emerald-700 w-10 h-10 rounded-full flex items-center justify-center text-white transition" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://www.linkedin.com/in/northwestamauk/" target="_blank" class="bg-slate-800 hover:bg-emerald-700 w-10 h-10 rounded-full flex items-center justify-center text-white transition" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto border-t border-slate-800 pt-6 text-center text-xs text-slate-500">
+            &copy; 2026 North West Ahmadiyya Muslim Association UK. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      const btn = document.getElementById('menu-btn');
+      const menu = document.getElementById('mobile-menu');
+      btn.addEventListener('click', () => {
+          menu.classList.toggle('hidden');
+      });
+
+      // Timetable Calculation Logic
+      const tz = "Europe/London";
+      const SAHOOR_OFFSET_MINUTES = 90;
+      const IFTAR_OFFSET_MINUTES  = 2;
+      const OPEN_METEO_MAX_DAYS_AHEAD = 15;
+
+      const startInput = document.getElementById("startDate");
+      const endInput   = document.getElementById("endDate");
+      const useOpenMeteoInput = document.getElementById("useOpenMeteo");
+
+      const todayLocal = new Date();
+      const todayUTC = toUTCDate(todayLocal);
+
+      startInput.value = toISODate(todayLocal);
+      endInput.value = toISODate(fromUTCDate(addDays(todayUTC, 29)));
+
+      startInput.addEventListener("change", () => {
+        const s = parseISODate(startInput.value);
+        const e = parseISODate(endInput.value);
+        if (!s) return;
+        if (!e || e < s) {
+          endInput.value = toISODate(fromUTCDate(addDays(s, 29)));
+        }
+      });
+
+      document.getElementById("btnGenerate").addEventListener("click", generateTimetable);
+      document.getElementById("postcode").addEventListener("keydown", (e) => {
+        if (e.key === "Enter") generateTimetable();
+      });
+
+      const manualWrap = document.getElementById("manualWrap");
+      document.getElementById("btnToggleManual").addEventListener("click", () => {
+        manualWrap.classList.toggle('hidden');
+      });
+
+      async function generateTimetable() {
+        const postcodeField = document.getElementById("postcode");
+        const statusDiv = document.getElementById("status");
+        const tableBody = document.querySelector("#timeTable tbody");
+        const rawPostcode = postcodeField.value.trim();
+        const postcode = rawPostcode.replace(/\s+/g, "").toUpperCase();
+        const startDateUTC = parseISODate(startInput.value);
+        const endDateUTC   = parseISODate(endInput.value);
+
+        if (!startDateUTC || !endDateUTC) {
+          setStatus(statusDiv, "Please select both Date From and Date To.", true);
+          return;
+        }
+        if (endDateUTC < startDateUTC) {
+          setStatus(statusDiv, "Date To must be the same as or after Date From.", true);
+          return;
+        }
+
+        const daysRequested = diffDaysInclusive(startDateUTC, endDateUTC);
+        if (daysRequested > 120) {
+          setStatus(statusDiv, "Please select a smaller range (max 120 days).", true);
+          return;
+        }
+
+        setStatus(statusDiv, "Resolving location...", false);
+        tableBody.innerHTML = '<tr><td colspan="6" class="py-6">Loading...</td></tr>';
+
+        let lat = null, lon = null, locationLabel = "";
+
+        try {
+          if (postcode.length >= 5) {
+            const geoUrl = `https://api.postcodes.io/postcodes/${encodeURIComponent(postcode)}`;
+            const geoRes = await fetchWithTimeout(geoUrl, 8000);
+            if (!geoRes.ok) {
+              const text = await safeText(geoRes);
+              throw new Error(`Postcodes.io error (${geoRes.status}): ${text || geoRes.statusText}`);
+            }
+            const geoData = await geoRes.json();
+            if (geoData?.status === 200 && geoData?.result) {
+              lat = geoData.result.latitude;
+              lon = geoData.result.longitude;
+              const area = geoData.result.admin_district || geoData.result.parliamentary_constituency || "UK";
+              locationLabel = `${postcode} (${area})`;
+            } else {
+              throw new Error("Invalid postcode response.");
+            }
+          } else {
+            throw new Error("Postcode too short.");
+          }
+        } catch {
+          const latField = document.getElementById("lat").value;
+          const lonField = document.getElementById("lon").value;
+          const latNum = Number(latField);
+          const lonNum = Number(lonField);
+          if (Number.isFinite(latNum) && Number.isFinite(lonNum)) {
+            lat = latNum;
+            lon = lonNum;
+            locationLabel = `Manual lat/lon (${lat.toFixed(4)}, ${lon.toFixed(4)})`;
+          } else {
+            setStatus(statusDiv, "Location failed. Your network may be blocking Postcodes.io. Click 'Manual Lat/Lon' and enter coordinates.", true);
+            tableBody.innerHTML = '<tr><td colspan="6" class="py-6 text-red-600">Location lookup failed</td></tr>';
+            return;
+          }
+        }
+
+        try {
+          tableBody.innerHTML = "";
+          const startISO = startInput.value;
+          const endISO   = endInput.value;
+          const withinWindow = isWithinOpenMeteoWindow(startDateUTC, endDateUTC);
+          let sunSource = "Local calculation (fallback)";
+          let meteoData = null;
+
+          if (useOpenMeteoInput.checked && withinWindow) {
+            setStatus(statusDiv, `Using Open-Meteo for: ${locationLabel}...`, false);
+            meteoData = await tryOpenMeteoSunriseSunset(lat, lon, startISO, endISO);
+            if (meteoData) sunSource = "Open-Meteo";
+          }
+
+          setStatus(statusDiv, `Timetable for: ${locationLabel} | Source: ${sunSource}`, false);
+
+          if (meteoData?.daily?.time?.length) {
+            const dates = meteoData.daily.time;
+            const sunrises = meteoData.daily.sunrise;
+            const sunsets = meteoData.daily.sunset;
+            for (let i = 0; i < dates.length; i++) {
+              const d = parseISODate(dates[i]);
+              const sunriseObj = new Date(sunrises[i]);
+              const sunsetObj  = new Date(sunsets[i]);
+              const sahoor = new Date(sunriseObj.getTime() - SAHOOR_OFFSET_MINUTES * 60 * 1000);
+              const iftar  = new Date(sunsetObj.getTime() + IFTAR_OFFSET_MINUTES * 60 * 1000);
+              tableBody.insertAdjacentHTML("beforeend", `
+                <tr>
+                  <td>${i + 1}</td>
+                  <td>${formatWeekday(d)}</td>
+                  <td>${formatDateShort(d)}</td>
+                  <td>${formatTimeInTZ(sunriseObj, tz)}</td>
+                  <td>${formatTimeInTZ(sahoor, tz)}</td>
+                  <td>${formatTimeInTZ(iftar, tz)}</td>
+                </tr>
+              `);
+            }
+            return;
+          }
+
+          let idx = 1;
+          for (let d = new Date(startDateUTC); d <= endDateUTC; d = addDays(d, 1)) {
+            const y = d.getUTCFullYear();
+            const m = d.getUTCMonth() + 1;
+            const day = d.getUTCDate();
+            const sunriseUTCmins = calcSunriseUTC(y, m, day, lat, lon);
+            const sunsetUTCmins  = calcSunsetUTC(y, m, day, lat, lon);
+            if (sunriseUTCmins == null) continue;
+            const sunriseUTC = dateFromUTCMinutes(y, m, day, sunriseUTCmins);
+            const sunsetUTC  = dateFromUTCMinutes(y, m, day, sunsetUTCmins);
+            const sahoor = new Date(sunriseUTC.getTime() - SAHOOR_OFFSET_MINUTES * 60 * 1000);
+            const iftar  = new Date(sunsetUTC.getTime() + IFTAR_OFFSET_MINUTES * 60 * 1000);
+            tableBody.insertAdjacentHTML("beforeend", `
+              <tr>
+                <td>${idx++}</td>
+                <td>${formatWeekday(d)}</td>
+                <td>${formatDateShort(d)}</td>
+                <td>${formatTimeInTZ(sunriseUTC, tz)}</td>
+                <td>${formatTimeInTZ(sahoor, tz)}</td>
+                <td>${formatTimeInTZ(iftar, tz)}</td>
+              </tr>
+            `);
+          }
+        } catch (e) {
+          setStatus(statusDiv, `Error: ${e.message}`, true);
+        }
+      }
+
+      function setStatus(el, msg, isError){
+        el.textContent = msg;
+        el.style.color = isError ? "#b91c1c" : "#065f46";
+        el.style.backgroundColor = isError ? "#fef2f2" : "#ffffff";
+      }
+
+      async function tryOpenMeteoSunriseSunset(lat, lon, startISO, endISO) {
+        const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&daily=sunrise,sunset&timezone=Europe%2FLondon&start_date=${startISO}&end_date=${endISO}`;
+        try {
+          const res = await fetchWithTimeout(url, 9000);
+          return res.ok ? await res.json() : null;
+        } catch { return null; }
+      }
+
+      function isWithinOpenMeteoWindow(startUTC, endUTC) {
+        const maxUTC = addDays(toUTCDate(new Date()), OPEN_METEO_MAX_DAYS_AHEAD);
+        return startUTC <= maxUTC && endUTC <= maxUTC;
+      }
+
+      async function fetchWithTimeout(url, ms) {
+        const controller = new AbortController();
+        const id = setTimeout(() => controller.abort(), ms);
+        try { return await fetch(url, { signal: controller.signal }); }
+        finally { clearTimeout(id); }
+      }
+
+      async function safeText(res) { try { return await res.text(); } catch { return ""; } }
+      function formatTimeInTZ(dateObj, timeZone) { return new Intl.DateTimeFormat("en-GB", { timeZone, hour: "2-digit", minute: "2-digit", hour12: false }).format(dateObj); }
+      function formatWeekday(dateUTC) { return new Intl.DateTimeFormat("en-GB", { timeZone: tz, weekday: "short" }).format(dateUTC); }
+      function formatDateShort(dateUTC) { return new Intl.DateTimeFormat("en-GB", { timeZone: tz, day: "2-digit", month: "short" }).format(dateUTC); }
+      function toISODate(d) { return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`; }
+      function toUTCDate(localDate) { return new Date(Date.UTC(localDate.getFullYear(), localDate.getMonth(), localDate.getDate())); }
+      function fromUTCDate(utcDate) { return new Date(utcDate.getUTCFullYear(), utcDate.getUTCMonth(), utcDate.getUTCDate()); }
+      function parseISODate(iso) { if (!iso) return null; const [y, m, d] = iso.split("-").map(Number); return new Date(Date.UTC(y, m - 1, d)); }
+      function addDays(dateObj, days) { const d = new Date(dateObj.getTime()); d.setUTCDate(d.getUTCDate() + days); return d; }
+      function diffDaysInclusive(s, e) { return Math.floor((e.getTime() - s.getTime()) / 86400000) + 1; }
+      function calcSunriseUTC(y, m, d, lat, lon) { return calcSunUTC(true, y, m, d, lat, lon); }
+      function calcSunsetUTC(y, m, d, lat, lon) { return calcSunUTC(false, y, m, d, lat, lon); }
+      function calcSunUTC(isSunrise, year, month, day, latitude, longitude) {
+        const zenith = 90.833;
+        const N = dayOfYear(year, month, day);
+        const lngHour = longitude / 15;
+        const t = isSunrise ? N + ((6 - lngHour) / 24) : N + ((18 - lngHour) / 24);
+        const M = (0.9856 * t) - 3.289;
+        let L = normalizeDegrees(M + (1.916 * Math.sin(degToRad(M))) + (0.020 * Math.sin(degToRad(2 * M))) + 282.634);
+        let RA = normalizeDegrees(radToDeg(Math.atan(0.91764 * Math.tan(degToRad(L)))));
+        RA = (RA + (Math.floor(L / 90) * 90 - Math.floor(RA / 90) * 90)) / 15;
+        const sinDec = 0.39782 * Math.sin(degToRad(L));
+        const cosDec = Math.cos(Math.asin(sinDec));
+        const cosH = (Math.cos(degToRad(zenith)) - (sinDec * Math.sin(degToRad(latitude)))) / (cosDec * Math.cos(degToRad(latitude)));
+        if (cosH > 1 || cosH < -1) return null;
+        let H = (isSunrise ? 360 - radToDeg(Math.acos(cosH)) : radToDeg(Math.acos(cosH))) / 15;
+        return normalizeHours(H + RA - (0.06571 * t) - 6.622 - lngHour) * 60;
+      }
+      function dateFromUTCMinutes(year, month, day, utcMinutes) { return new Date(Date.UTC(year, month - 1, day, 0, 0, Math.round(utcMinutes * 60))); }
+      function dayOfYear(y, m, d) { return Math.floor((new Date(Date.UTC(y, m - 1, d)) - new Date(Date.UTC(y, 0, 1))) / 86400000) + 1; }
+      function degToRad(deg) { return deg * Math.PI / 180; }
+      function radToDeg(rad) { return rad * 180 / Math.PI; }
+      function normalizeDegrees(deg) { deg %= 360; return deg < 0 ? deg + 360 : deg; }
+      function normalizeHours(h) { h %= 24; return h < 0 ? h + 24 : h; }
+    </script>
+</body>
+</html>

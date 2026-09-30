@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>North West AMA UK | Ahmadiyya Muslim Association</title>
+    <!-- Tailwind CSS CDN for Modern, Colorful Styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        emeraldTheme: {
+                            50: '#ecfdf5',
+                            600: '#059669',
+                            700: '#047857',
+                            800: '#065f46',
+                            900: '#064e3b',
+                        },
+                        goldTheme: {
+                            500: '#d97706',
+                            600: '#b45309',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+    <div class="bg-emerald-900 text-emerald-100 py-2 px-4 text-xs sm:text-sm font-medium">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <p><i class="fa-solid fa-quote-left text-amber-400 mr-1"></i> "Love for All, Hatred for None" <i class="fa-solid fa-quote-right text-amber-400 ml-1"></i></p>
+            <div class="flex items-center gap-4 text-white">
+                <a href="https://www.facebook.com/northwestamauk" target="_blank" class="hover:text-amber-400 transition" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.twitter.com/northwestamauk" target="_blank" class="hover:text-amber-400 transition" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.instagram.com/northwestamauk/" target="_blank" class="hover:text-amber-400 transition" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.youtube.com/c/northwestamauk" target="_blank" class="hover:text-amber-400 transition" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://www.linkedin.com/in/northwestamauk/" target="_blank" class="hover:text-amber-400 transition" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="logo.png" alt="North West AMA UK Logo" class="h-14 w-14 object-contain rounded-full shadow-sm">
+                <div>
+                    <h1 class="text-lg sm:text-xl font-bold text-emerald-900 leading-tight">North West AMA UK</h1>
+                    <p class="text-xs text-slate-500 font-medium">Ahmadiyya Muslim Community</p>
+                </div>
+            </a>
+            <nav class="hidden md:flex items-center gap-6 font-semibold text-slate-600">
+                <a href="index.html" class="text-emerald-700 border-b-2 border-emerald-700 pb-1">Home</a>
+                <a href="announcements.html" class="hover:text-emerald-700 transition">Announcements & Events</a>
+                <a href="contact.html" class="hover:text-emerald-700 transition">Contact Us</a>
+                <a href="https://chanda.org.uk/" target="_blank" class="bg-yellow-400 hover:bg-yellow-500 text-slate-900 font-bold px-4 py-2 rounded-xl shadow-md transition transform hover:-translate-y-0.5 flex items-center gap-2">
+                    <i class="fa-solid fa-hand-holding-dollar"></i> Chanda
+                </a>
+            </nav>
+            <div class="md:hidden flex items-center gap-3">
+                <a href="https://chanda.org.uk/" target="_blank" class="bg-yellow-400 hover:bg-yellow-500 text-slate-900 font-bold px-3 py-1.5 rounded-lg text-xs shadow transition">
+                    Chanda
+                </a>
+                <button id="menu-btn" class="text-slate-700 text-2xl focus:outline-none" aria-label="Toggle Menu"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+        <!-- Mobile Nav Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t px-4 pt-2 pb-4 space-y-2 font-medium">
+            <a href="index.html" class="block py-2 text-emerald-700 font-bold">Home</a>
+            <a href="announcements.html" class="block py-2 text-slate-600">Announcements & Events</a>
+            <a href="contact.html" class="block py-2 text-slate-600">Contact Us</a>
+            <a href="https://chanda.org.uk/" target="_blank" class="block py-2 px-3 text-center bg-yellow-400 hover:bg-yellow-500 text-slate-900 font-bold rounded-lg transition">Chanda</a>
+        </div>
+    </header>
+
+    <section class="relative bg-gradient-to-r from-emerald-900 via-emerald-800 to-teal-900 text-white py-20 px-4 overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#d1fae5_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-7xl mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="bg-amber-500/20 text-amber-300 border border-amber-500/30 text-xs px-3 py-1 rounded-full uppercase tracking-wider font-semibold">Welcome to North West Region</span>
+                <h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight mt-4 leading-tight">Spreading Peace, Faith & Service to Humanity</h2>
+                <p class="mt-4 text-emerald-100 text-lg leading-relaxed">Serving chapters across Manchester, Liverpool, Rhyl, and surrounding areas under the spiritual guidance of Khilafat-e-Ahmadiyya.</p>
+                <div class="mt-8 flex flex-wrap gap-4">
+                    <a href="announcements.html" class="bg-amber-500 hover:bg-amber-600 text-white font-bold px-6 py-3 rounded-xl shadow-lg transition transform hover:-translate-y-0.5"><i class="fa-solid fa-bullhorn mr-2"></i> View Upcoming Events</a>
+                    <a href="contact.html" class="bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold px-6 py-3 rounded-xl backdrop-blur-sm transition"><i class="fa-solid fa-envelope mr-2"></i> Get in Touch</a>
+                </div>
+            </div>
+            <!-- Interactive Live Regional Widget Card -->
+            <div class="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-3xl shadow-2xl text-white">
+                <div class="flex items-center justify-between border-b border-white/10 pb-4 mb-4">
+                    <h3 class="font-bold text-lg"><i class="fa-solid fa-clock-rotate-left text-amber-400 mr-2"></i> Regional Focus</h3>
+                    <span class="text-xs bg-emerald-700 px-2.5 py-1 rounded-full">UK North West</span>
+                </div>
+                <div class="grid grid-cols-2 gap-4 text-center">
+                    <div class="bg-white/5 p-4 rounded-2xl border border-white/10">
+                        <i class="fa-solid fa-mosque text-amber-400 text-2xl mb-2"></i>
+                        <h4 class="font-bold text-sm">Darul Aman</h4>
+                        <p class="text-xs text-emerald-200 mt-1">Manchester Chapter</p>
+                    </div>
+                    <div class="bg-white/5 p-4 rounded-2xl border border-white/10">
+                        <i class="fa-solid fa-hand-holding-heart text-amber-400 text-2xl mb-2"></i>
+                        <h4 class="font-bold text-sm">Charity & Outreaches</h4>
+                        <p class="text-xs text-emerald-200 mt-1">Active Local Impact</p>
+                    </div>
+                </div>
+                <div class="mt-4 bg-emerald-950/40 p-3 rounded-xl text-xs text-center text-emerald-200">
+                    Looking for official community circulars and sponsor letters? Check our announcements regularly.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 px-4 max-w-7xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+            <h2 class="text-3xl font-bold text-slate-900">Explore Our Community Activities</h2>
+            <p class="text-slate-600 mt-2">Discover how our general membership, auxiliary branches, and regional chapters work tirelessly towards moral training, community bonding, and humanitarian services.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <!-- Q-Card 1: All Jama'at Members -->
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-100 hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 flex flex-col">
+                <div class="bg-gradient-to-r from-amber-500 to-orange-600 p-6 text-white">
+                    <div class="bg-white/20 w-12 h-12 rounded-2xl flex items-center justify-center text-xl mb-4 backdrop-blur-sm">
+                        <i class="fa-solid fa-people-group"></i>
+                    </div>
+                    <h3 class="text-xl font-bold">All Jama'at Members</h3>
+                    <p class="text-amber-100 text-sm mt-1">Core Community Portal</p>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <p class="text-slate-600 text-sm leading-relaxed">Resources, updates, general meetings, and collective regional programmes open for all members of the North West community.</p>
+                    <a href="https://ahmadiyya.uk/" target="_blank" class="mt-6 inline-flex items-center text-amber-600 font-semibold text-sm hover:text-amber-700">Visit Website <i class="fa-solid fa-arrow-up-right-from-square ml-2 text-xs"></i></a>
+                </div>
+            </div>
+
+            <!-- Q-Card 2: Majlis Ansarullah -->
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-100 hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 flex flex-col">
+                <div class="bg-gradient-to-r from-emerald-600 to-teal-700 p-6 text-white">
+                    <div class="bg-white/20 w-12 h-12 rounded-2xl flex items-center justify-center text-xl mb-4 backdrop-blur-sm">
+                        <i class="fa-solid fa-users-line"></i>
+                    </div>
+                    <h3 class="text-xl font-bold">Majlis Ansarullah</h3>
+                    <p class="text-emerald-100 text-sm mt-1">Elders & Senior Members Branch</p>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <p class="text-slate-600 text-sm leading-relaxed">Fostering spiritual growth, moral guidance, and active participation in community leadership and regional advisory initiatives.</p>
+                    <a href="https://ansar.org.uk" target="_blank" class="mt-6 inline-flex items-center text-emerald-700 font-semibold text-sm hover:text-emerald-800">Learn More <i class="fa-solid fa-arrow-right ml-2 text-xs"></i></a>
+                </div>
+            </div>
+
+            <!-- Q-Card 3: Khuddam-ul-Ahmadiyya -->
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-100 hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 flex flex-col">
+                <div class="bg-gradient-to-r from-blue-600 to-indigo-700 p-6 text-white">
+                    <div class="bg-white/20 w-12 h-12 rounded-2xl flex items-center justify-center text-xl mb-4 backdrop-blur-sm">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold">Khuddam-ul-Ahmadiyya</h3>
+                    <p class="text-blue-100 text-sm mt-1">Youth Association (AMYA)</p>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <p class="text-slate-600 text-sm leading-relaxed">Empowering the youth through sports tournaments, educational seminars, charity clean-ups, and character-building events.</p>
+                    <a href="https://khuddam.org.uk" target="_blank" class="mt-6 inline-flex items-center text-blue-700 font-semibold text-sm hover:text-blue-800">Learn More <i class="fa-solid fa-arrow-right ml-2 text-xs"></i></a>
+                </div>
+            </div>
+
+            <!-- Q-Card 4: Lajna Imaillah -->
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-100 hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 flex flex-col">
+                <div class="bg-gradient-to-r from-rose-600 to-pink-700 p-6 text-white">
+                    <div class="bg-white/20 w-12 h-12 rounded-2xl flex items-center justify-center text-xl mb-4 backdrop-blur-sm">
+                        <i class="fa-solid fa-hand-holding-seedling"></i>
+                    </div>
+                    <h3 class="text-xl font-bold">Lajna Imaillah</h3>
+                    <p class="text-rose-100 text-sm mt-1">Ladies & Girls Auxiliary</p>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <p class="text-slate-600 text-sm leading-relaxed">Dedicated to the moral and spiritual training of women and children, organizing conferences, educational classes, and welfare work.</p>
+                    <a href="https://lajna.org.uk/" target="_blank" class="mt-6 inline-flex items-center text-rose-700 font-semibold text-sm hover:text-rose-800">Learn More <i class="fa-solid fa-arrow-right ml-2 text-xs"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-slate-300 py-12 px-4 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <div>
+                <div class="flex items-center gap-3 mb-3">
+                    <img src="logo.png" alt="North West AMA UK Logo" class="h-10 w-10 object-contain rounded-full">
+                    <h4 class="text-white font-bold text-lg">North West AMA UK</h4>
+                </div>
+                <p class="text-sm text-slate-400">Official regional portal serving members across the North West of England and Wales under the Ahmadiyya Muslim Association UK (Registered Charity No. 1208543).</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold text-base mb-3">Quick Links</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="index.html" class="hover:text-amber-400 transition">Home</a></li>
+                    <li><a href="announcements.html" class="hover:text-amber-400 transition">Announcements & Upcoming Events</a></li>
+                    <li><a href="contact.html" class="hover:text-amber-400 transition">Contact Us & Inquiries</a></li>
+                    <li><a href="https://chanda.org.uk/" target="_blank" class="text-yellow-400 hover:text-yellow-300 transition font-medium">Chanda Portal</a></li>
+                    <li><a href="https://ahmadiyya.uk" target="_blank" class="hover:text-amber-400 transition">National Website (ahmadiyya.uk)</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold text-base mb-3">Connect With Us</h4>
+                <p class="text-sm text-slate-400 mb-4">Direct email support: <br><strong class="text-white">Northwestamauk@Gmail.Com</strong></p>
+                <div class="flex gap-3 text-lg">
+                    <a href="https://www.facebook.com/northwestamauk" target="_blank" class="bg-slate-800 hover:bg-emerald-700 w-10 h-10 rounded-full flex items-center justify-center text-white transition" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.twitter.com/northwestamauk" target="_blank" class="bg-slate-800 hover:bg-emerald-700 w-10 h-10 rounded-full flex items-center justify-center text-white transition" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/northwestamauk/" target="_blank" class="bg-slate-800 hover:bg-emerald-700 w-10 h-10 rounded-full flex items-center justify-center text-white transition" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/c/northwestamauk" target="_blank" class="bg-slate-800 hover:bg-emerald-700 w-10 h-10 rounded-full flex items-center justify-center text-white transition" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://www.linkedin.com/in/northwestamauk/" target="_blank" class="bg-slate-800 hover:bg-emerald-700 w-10 h-10 rounded-full flex items-center justify-center text-white transition" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto border-t border-slate-800 pt-6 text-center text-xs text-slate-500">
+            &copy; 2026 North West Ahmadiyya Muslim Association UK. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
